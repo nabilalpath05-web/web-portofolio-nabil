@@ -1,0 +1,2722 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Nabil Alpath Abdul Rozak — Junior Web Developer</title>
+    <meta name="title" content="Nabil Alpath Abdul Rozak — Junior Web Developer">
+    <meta name="description"
+        content="Personal portfolio Nabil Alpath Abdul Rozak. Siswa/Lulusan Rekayasa Perangkat Lunak SMKN 1 Kawali, Junior Web Developer berfokus pada HTML, CSS, Laravel, dan MySQL.">
+    <meta name="keywords"
+        content="Nabil Alpath Abdul Rozak, Junior Web Developer, HTML, CSS, Laravel, MySQL, SMKN 1 Kawali, Portfolio Developer, Ciamis, Indonesia">
+    <meta name="author" content="Nabil Alpath Abdul Rozak">
+    <meta name="theme-color" content="#0A0A0A">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nabilalpath.dev/">
+    <meta property="og:title" content="Nabil Alpath Abdul Rozak — Junior Web Developer">
+    <meta property="og:description"
+        content="Modern minimalist developer portfolio. Siswa/Lulusan RPL SMKN 1 Kawali. Specializing in HTML, CSS, Laravel, and MySQL.">
+    <meta property="og:image" content="assets/images/project-company-profile.svg">
+
+    <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (Body), JetBrains Mono (Code/Accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon Monogram -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/monogram.svg">
+
+    <!-- ==========================================================================
+       EMBEDDED CSS STYLES
+       ========================================================================== -->
+    <style>
+        :root {
+            --bg-main: #0a0a0c;
+            --bg-secondary: #121318;
+            --bg-card: #161820;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(198, 255, 77, 0.4);
+            --accent: #c6ff4d;
+            --accent-hover: #b5f038;
+            --accent-glow: rgba(198, 255, 77, 0.15);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow & Background Overlay */
+        .ambient-glow {
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            filter: blur(50px);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        /* Section Header */
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-label {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 650px;
+            font-size: 1.05rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.25rem 0;
+            transition: var(--transition);
+            backdrop-filter: blur(12px);
+            background: rgba(10, 10, 12, 0.7);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-sub {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            border-color: var(--border-subtle);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-subtle);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-lg {
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 170px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-topline {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-intro {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(198, 255, 77, 0.1);
+            border: 1px solid rgba(198, 255, 77, 0.2);
+            padding: 0.3rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--accent);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .hero-name {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-name .highlight {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-primary);
+        }
+
+        .hero-headline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            max-width: 550px;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Hero Bento & Portrait Card */
+        .hero-profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            position: relative;
+        }
+
+        .hero-portrait-frame {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-portrait-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .crosshair-marker {
+            position: absolute;
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 1rem;
+        }
+
+        .crosshair-tl {
+            top: 10px;
+            left: 10px;
+        }
+
+        .crosshair-tr {
+            top: 10px;
+            right: 10px;
+        }
+
+        .portrait-tag-top {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-subtle);
+            padding: 0.35rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .portrait-tag-top-right {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-subtle);
+            padding: 0.35rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent);
+        }
+
+        .portrait-badge-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .portrait-badge-sub {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            margin-bottom: 1rem;
+        }
+
+        .hero-portrait-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1rem;
+        }
+
+        .spec-label {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .spec-val {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Creative Music Card */
+        .creative-music-card {
+            margin-top: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .creative-music-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .music-equalizer {
+            display: flex;
+            gap: 3px;
+            align-items: flex-end;
+            height: 18px;
+        }
+
+        .equalizer-bar {
+            width: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            height: 40%;
+            animation: equalize 1.2s ease-in-out infinite alternate;
+        }
+
+        .equalizer-bar:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .equalizer-bar:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .equalizer-bar:nth-child(4) {
+            animation-delay: 0.1s;
+        }
+
+        .equalizer-bar:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes equalize {
+            0% {
+                height: 20%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        .music-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .music-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .hero-scroll-indicator {
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            width: fit-content;
+        }
+
+        .scroll-mouse {
+            width: 18px;
+            height: 30px;
+            border: 2px solid var(--text-muted);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .scroll-wheel {
+            width: 3px;
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 2px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 1.5s infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                top: 5px;
+                opacity: 1;
+            }
+
+            100% {
+                top: 15px;
+                opacity: 0;
+            }
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+        }
+
+        .editorial-lead {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .highlight-num {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .highlight-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .highlight-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .about-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .about-portrait-card {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .about-avatar-wrap {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .about-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-avatar-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .bio-label {
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+        }
+
+        .about-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bio-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .bio-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bio-value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .art-badge-card {
+            background: rgba(198, 255, 77, 0.03);
+            border: 1px dashed var(--border-hover);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .skill-category-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .category-badge {
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .skill-icon-wrap {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .skill-spec {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        .project-split-reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .project-mockup-wrapper {
+            background: #0f1015;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid var(--border-subtle);
+        }
+
+        .project-split-reverse .project-mockup-wrapper {
+            border-right: none;
+            border-left: 1px solid var(--border-subtle);
+        }
+
+        .project-mockup-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-info {
+            padding: 2.5rem;
+        }
+
+        .project-number {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-heading {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .project-summary {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .project-feature-item svg {
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .tech-pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .tech-pill.accent {
+            border-color: rgba(198, 255, 77, 0.3);
+            color: var(--accent);
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-headline {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-desc {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-channel-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .channel-main {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .channel-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(198, 255, 77, 0.1);
+            color: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .channel-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .channel-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .channel-action-btn {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .channel-action-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .contact-form-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+        }
+
+        .form-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .form-input,
+        .form-textarea {
+            background: var(--bg-main);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 4rem 0 2rem;
+            background: #08080a;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .back-to-top {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+        }
+
+        .back-to-top:hover {
+            color: var(--accent);
+        }
+
+        /* Modals */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-window {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-window {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-title {
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* CV Document Styles */
+        .cv-document {
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cv-header {
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cv-header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cv-photo-frame {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+        }
+
+        .cv-photo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cv-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .cv-role {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-family: var(--font-mono);
+        }
+
+        .cv-contact-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .cv-section-title {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Toast Notification */
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toast {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            color: var(--text-primary);
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Breakdown */
+        @media (max-width: 992px) {
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card,
+            .project-split-reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .project-split-reverse .project-info {
+                order: 2;
+            }
+
+            .project-split-reverse .project-mockup-wrapper {
+                order: 1;
+                border-left: none;
+                border-bottom: 1px solid var(--border-subtle);
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-main);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border-subtle);
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .btn-talk-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Noise & Ambient Lighting -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="ambient-glow" style="top: 15%; left: 15%;" aria-hidden="true"></div>
+    <div class="ambient-glow" style="top: 65%; left: 85%;" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+        NAVIGATION BAR
+        ========================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <!-- Monogram Logo -->
+            <a href="#home" class="brand-link" aria-label="Nabil Alpath Abdul Rozak Portfolio Home">
+                <div class="brand-monogram">
+                    <img src="monogram.svg" alt="NA Monogram Logo" width="32" height="32">
+                </div>
+                <div class="brand-meta">
+                    <span class="brand-name">NABIL ALPATH</span>
+                    <span class="brand-sub">Junior Web Developer</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-sm btn-talk-nav">
+                    Let's Talk
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+          HERO SECTION
+          ========================================================================== -->
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <!-- Hero Left Column: Editorial Introduction -->
+                <div class="hero-content">
+                    <div class="hero-topline">
+                        <span class="hero-intro">HELLO, I'M</span>
+                        <div class="status-pill">
+                            <span class="status-dot"></span>
+                            Siap Mengembangkan Kemampuan di Dunia Kerja
+                        </div>
+                    </div>
+
+                    <h1 class="hero-name">
+                        NABIL ALPATH <br>
+                        <span class="highlight">ABDUL R</span>
+                    </h1>
+
+                    <div class="hero-headline">
+                        Junior Web Developer | HTML, CSS, Laravel &amp; MySQL
+                    </div>
+
+                    <p class="hero-desc">
+                        Siswa/lulusan <strong>SMKN 1 Kawali</strong> jurusan <strong>Rekayasa Perangkat Lunak
+                            (RPL)</strong> yang memiliki minat besar dalam bidang teknologi informasi dan pengembangan
+                        perangkat lunak. Memiliki semangat belajar tinggi, mampu bekerja sama dalam tim, bertanggung
+                        jawab, dan siap mengembangkan kemampuan di dunia kerja.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            View Projects
+                            <span class="btn-arrow" aria-hidden="true">↓</span>
+                        </a>
+                        <button class="btn btn-outline btn-lg" data-open-cv>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Editorial Bento Cards & Portrait -->
+                <div class="hero-visual">
+                    <!-- Card 1: Editorial Profile Portrait Card -->
+                    <div class="hero-profile-card">
+                        <div class="hero-portrait-frame">
+                            <img src="nabil-profile.jpg" alt="Nabil Alpath Abdul R — Junior Web Developer"
+                                class="hero-portrait-img">
+
+                            <!-- Editorial crosshair corner marks -->
+                            <span class="crosshair-marker crosshair-tl" aria-hidden="true">+</span>
+                            <span class="crosshair-marker crosshair-tr" aria-hidden="true">+</span>
+
+                            <!-- Floating Top Status Tag -->
+                            <div class="portrait-tag-top">
+                                <span class="status-dot"></span>
+                                <span>AVAILABLE // DEV 2026</span>
+                            </div>
+
+                            <!-- Floating Top Right Tag: Certified -->
+                            <div class="portrait-tag-top-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>SERTIFIKAT UKK</span>
+                            </div>
+                        </div>
+
+                        <!-- Meta & Specs under Photo -->
+                        <div class="hero-portrait-meta-block">
+                            <div>
+                                <div class="portrait-badge-name">NABIL ALPATH ABDUL R</div>
+                                <div class="portrait-badge-sub">
+                                    <span class="status-dot" style="width: 5px; height: 5px;"></span>
+                                    SMKN 1 KAWALI • REKAYASA PERANGKAT LUNAK
+                                </div>
+                            </div>
+
+                            <!-- Technical & Academic Specs -->
+                            <div class="hero-portrait-specs">
+                                <div class="portrait-spec-item">
+                                    <span class="spec-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                        </svg>
+                                        Pendidikan
+                                    </span>
+                                    <span class="spec-val">SMKN 1 Kawali (RPL)</span>
+                                </div>
+
+                                <div class="portrait-spec-item">
+                                    <span class="spec-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        Lokasi
+                                    </span>
+                                    <span class="spec-val" style="color: var(--accent);">Panjalu, Ciamis</span>
+                                </div>
+
+                                <div class="portrait-spec-item">
+                                    <span class="spec-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                            <polyline points="2 17 12 22 22 17"></polyline>
+                                            <polyline points="2 12 12 17 22 12"></polyline>
+                                        </svg>
+                                        Primary Stack
+                                    </span>
+                                    <span class="spec-val">HTML • CSS • Laravel • MySQL</span>
+                                </div>
+
+                                <div class="portrait-spec-item">
+                                    <span class="spec-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        Local Time
+                                    </span>
+                                    <span class="spec-val" id="liveClock">Loading time...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Softskills & Teamwork Highlight -->
+                    <div class="creative-music-card">
+                        <div class="creative-music-left">
+                            <div class="music-equalizer" aria-hidden="true">
+                                <div class="equalizer-bar"></div>
+                                <div class="equalizer-bar"></div>
+                                <div class="equalizer-bar"></div>
+                                <div class="equalizer-bar"></div>
+                                <div class="equalizer-bar"></div>
+                            </div>
+                            <div>
+                                <div class="music-title">Soft Skills &amp; Kolaborasi</div>
+                                <div class="music-sub" id="audioStatusLabel">Team Work • Communication • Time Management
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" id="audioToggleBtn" aria-label="Toggle Skills Focus">
+                            Soft Skills
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <a href="#about" class="hero-scroll-indicator" aria-label="Scroll ke bagian About Me">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </a>
+        </section>
+
+        <!-- ==========================================================================
+          ABOUT ME SECTION (Editorial Two-Column)
+          ========================================================================== -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">01 // PROFILE &amp; RINGKASAN</span>
+                    <h2 class="section-title">Dedikasi Belajar Tinggi &amp; Siap Berkarya.</h2>
+                    <p class="section-subtitle">
+                        Memiliki pengetahuan dasar mengenai pemrograman, pengembangan aplikasi, serta pengelolaan
+                        website yang terstruktur.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Column 1: Narrative Story -->
+                    <div class="about-narrative">
+                        <div class="editorial-lead">
+                            "Saya merupakan pribadi yang memiliki semangat belajar tinggi, mampu bekerja sama dalam tim,
+                            bertanggung jawab, dan siap mengembangkan kemampuan serta pengalaman di dunia kerja."
+                        </div>
+
+                        <p class="about-p">
+                            Saya merupakan siswa/lulusan <strong>SMKN 1 Kawali</strong> jurusan <strong>Rekayasa
+                                Perangkat Lunak (RPL)</strong> yang memiliki minat besar dalam bidang teknologi
+                            informasi dan pengembangan perangkat lunak.
+                        </p>
+
+                        <p class="about-p">
+                            Saya telah membuktikan kemampuan teknis melalui proyek nyata seperti <strong>Pembuatan
+                                Website Company Profile</strong> berbasis HTML, CSS, PHP, Laravel, serta pengelolaan
+                            database untuk menampilkan informasi dan profil perusahaan secara informatif.
+                        </p>
+
+                        <p class="about-p">
+                            Selain itu, saya juga mengembangkan proyek sistem <strong>Pengelolaan Data Siswa</strong>
+                            menggunakan database MySQL untuk mempermudah proses penyimpanan, pencarian, dan pengolahan
+                            data dengan fitur CRUD lengkap.
+                        </p>
+
+                        <!-- Key Highlight Bento Grid -->
+                        <div class="about-highlights">
+                            <div class="highlight-box">
+                                <span class="highlight-num">02+</span>
+                                <span class="highlight-label">Proyek Utama</span>
+                                <span class="highlight-desc">Company Profile &amp; Pengelolaan Data Siswa.</span>
+                            </div>
+                            <div class="highlight-box">
+                                <span class="highlight-num">RPL</span>
+                                <span class="highlight-label">SMKN 1 Kawali</span>
+                                <span class="highlight-desc">Rekayasa Perangkat Lunak (SMKN 1 Kawali).</span>
+                            </div>
+                            <div class="highlight-box">
+                                <span class="highlight-num">UKK</span>
+                                <span class="highlight-label">Sertifikasi Rekayasa Perangkat Lunak</span>
+                                <span class="highlight-desc">Terverifikasi September 2026 di SMKN 1 Kawali.</span>
+                            </div>
+                            <div class="highlight-box">
+                                <span class="highlight-num">Soft Skills</span>
+                                <span class="highlight-label">Kerja Sama &amp; Komunikasi</span>
+                                <span class="highlight-desc">Teamwork, Communication, Problem Solving, &amp; Time
+                                    Management.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Side Cards & Bio Matrix -->
+                    <div class="about-sidebar">
+                        <!-- Author Profile Card with Photo -->
+                        <div class="about-card about-portrait-card">
+                            <div class="about-avatar-wrap">
+                                <img src="nabil-profile.jpg" alt="Nabil Alpath Abdul R" class="about-avatar-img">
+                            </div>
+                            <div class="about-avatar-meta">
+                                <span class="bio-label">NABIL ALPATH ABDUL R</span>
+                                <h4 class="about-avatar-name">Junior Web Developer</h4>
+                                <div class="status-pill"
+                                    style="padding: 0.2rem 0.6rem; font-size: 0.68rem; margin-top: 0.35rem; align-self: flex-start;">
+                                    <span class="status-dot"></span>
+                                    SMKN 1 KAWALI • RPL
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <h3 class="about-card-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                Biodata &amp; Kontak
+                            </h3>
+                            <ul class="bio-list">
+                                <li class="bio-item">
+                                    <span class="bio-label">Nama Lengkap</span>
+                                    <span class="bio-value">Nabil Alpath Abdul R</span>
+                                </li>
+                                <li class="bio-item">
+                                    <span class="bio-label">Pendidikan</span>
+                                    <span class="bio-value">SMKN 1 Kawali (Rekayasa Perangkat Lunak)</span>
+                                </li>
+                                <li class="bio-item">
+                                    <span class="bio-label">Alamat / Lokasi</span>
+                                    <span class="bio-value">Panjalu, Ciamis, Jawa Barat</span>
+                                </li>
+                                <li class="bio-item">
+                                    <span class="bio-label">No. Telepon / WA</span>
+                                    <span class="bio-value">0857-2317-7953</span>
+                                </li>
+                                <li class="bio-item">
+                                    <span class="bio-label">Email</span>
+                                    <span class="bio-value">nabilbilbul1108@gmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="art-badge-card">
+                            <h3 class="about-card-title" style="color: var(--accent);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Lisensi &amp; Sertifikasi UKK
+                            </h3>
+                            <p>
+                                <strong>Sertifikat Kompetensi Keahlian (UKK) Rekayasa Perangkat Lunak</strong><br>
+                                Diterbitkan oleh SMKN 1 Kawali (September 2026)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+          TECHNICAL SKILLS SECTION
+          ========================================================================== -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">02 // KEAHLIAN TEKNIS &amp; SOFTSKILL</span>
+                    <h2 class="section-title">Keterampilan Utama &amp; Kompetensi.</h2>
+                    <p class="section-subtitle">
+                        Kombinasi antara keahlian teknis (Hard Skills) dalam web development dan kemampuan interpersonal
+                        (Soft Skills) pendukung kerja tim.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- 1. Technical Hard Skills Category -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <h3 class="category-name">Hard Skills</h3>
+                            <span class="category-badge">Teknis</span>
+                        </div>
+                        <div class="skills-list">
+                            <!-- HTML & CSS -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <img src="html5.svg" alt="HTML Icon" width="22" height="22">
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">HTML &amp; CSS</span>
+                                    </div>
+                                    <span class="skill-spec">Web Development &amp; Tampilan Menarik</span>
+                                </div>
+                            </div>
+
+                            <!-- Laravel -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <img src="laravel.svg" alt="Laravel Icon" width="22" height="22">
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">Laravel</span>
+                                    </div>
+                                    <span class="skill-spec">Web Application Development</span>
+                                </div>
+                            </div>
+
+                            <!-- MySQL -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <img src="mysql.svg" alt="MySQL Icon" width="22" height="22">
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">MySQL</span>
+                                    </div>
+                                    <span class="skill-spec">Database Management &amp; Pengolahan Data</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Soft Skills Category -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <h3 class="category-name">Soft Skills</h3>
+                            <span class="category-badge">Interpersonal</span>
+                        </div>
+                        <div class="skills-list">
+                            <!-- Teamwork -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">Teamwork</span>
+                                    </div>
+                                    <span class="skill-spec">Kerja Sama Tim yang Efektif</span>
+                                </div>
+                            </div>
+
+                            <!-- Communication -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">Communication</span>
+                                    </div>
+                                    <span class="skill-spec">Komunikasi yang Baik &amp; Jelas</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem Solving -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9.66 16.03a5 5 0 1 1 4.68 0"></path>
+                                        <path d="M12 18v2"></path>
+                                        <path d="M12 8v4"></path>
+                                    </svg>
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">Problem Solving</span>
+                                    </div>
+                                    <span class="skill-spec">Pemecahan Masalah</span>
+                                </div>
+                            </div>
+
+                            <!-- Time Management -->
+                            <div class="skill-item">
+                                <div class="skill-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="skill-details">
+                                    <div class="skill-title-row">
+                                        <span class="skill-title">Time Management</span>
+                                    </div>
+                                    <span class="skill-spec">Manajemen Waktu yang Baik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+          FEATURED PROJECTS SECTION (Varied Layouts)
+          ========================================================================== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">03 // PENGALAMAN KERJA &amp; PROYEK</span>
+                    <h2 class="section-title">Hasil Karya &amp; Pengalaman Praktis.</h2>
+                    <p class="section-subtitle">
+                        Proyek pengembangan aplikasi dan pengelolaan website yang telah diselesaikan.
+                    </p>
+                </div>
+
+                <div class="projects-container">
+                    <!-- PROJECT 1: Company Profile Website -->
+                    <article class="project-card project-split">
+                        <!-- Left Mockup Frame -->
+                        <div class="project-mockup-wrapper">
+                            <img src="project-company-profile.svg" alt="Website Company Profile UI Mockup"
+                                class="project-mockup-img" loading="lazy">
+                        </div>
+
+                        <!-- Right Editorial Content -->
+                        <div class="project-info">
+                            <span class="project-number">PROYEK // 01 — WEB DEVELOPMENT</span>
+                            <h3 class="project-heading">Pembuatan Website Company Profile</h3>
+                            <p class="project-summary">
+                                Mengembangkan website company profile untuk menampilkan informasi dan profil perusahaan
+                                secara lengkap, profesional, dan mudah diakses.
+                            </p>
+
+                            <div class="project-features">
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Membuat dan mengatur tampilan halaman website agar menarik, informatif, dan
+                                        mudah digunakan.</span>
+                                </div>
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Mengelola konten website, seperti profil perusahaan, informasi layanan, dan
+                                        halaman lainnya.</span>
+                                </div>
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Menerapkan kemampuan dasar HTML, CSS, PHP, Laravel, dan pengelolaan
+                                        database.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="tech-pill-list">
+                                <span class="tech-pill accent">HTML</span>
+                                <span class="tech-pill accent">CSS</span>
+                                <span class="tech-pill">Laravel</span>
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">Database</span>
+                            </div>
+
+                            <!-- Action CTAs -->
+                            <div class="project-actions">
+                                <button class="btn btn-primary" data-open-project1>
+                                    Live Preview
+                                    <span class="btn-arrow" aria-hidden="true">↗</span>
+                                </button>
+                                <button class="btn btn-secondary" data-open-project1>
+                                    <img src="github.svg" alt="GitHub" width="16" height="16">
+                                    Source Code
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: Student Data Management -->
+                    <article class="project-card project-split-reverse">
+                        <!-- Left Editorial Content -->
+                        <div class="project-info">
+                            <span class="project-number">PROYEK // 02 — DATABASE &amp; SYSTEM</span>
+                            <h3 class="project-heading">Pengelolaan Data Siswa</h3>
+                            <p class="project-summary">
+                                Membuat proyek sistem pengelolaan data siswa untuk mempermudah proses penyimpanan,
+                                pengorganisasian, dan pengolahan data secara efisien.
+                            </p>
+
+                            <div class="project-features">
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Mengembangkan fitur tambah, edit, hapus (CRUD), dan menampilkan data
+                                        siswa.</span>
+                                </div>
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Mengelola informasi siswa menggunakan basis data MySQL terstruktur.</span>
+                                </div>
+                                <div class="project-feature-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Menerapkan kemampuan pemrograman dan pengelolaan database dalam membangun
+                                        sistem informasi.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="tech-pill-list">
+                                <span class="tech-pill accent">MySQL</span>
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">HTML</span>
+                                <span class="tech-pill">CSS</span>
+                                <span class="tech-pill">CRUD</span>
+                            </div>
+
+                            <!-- Action CTAs -->
+                            <div class="project-actions">
+                                <button class="btn btn-primary" data-open-project2>
+                                    Live Preview
+                                    <span class="btn-arrow" aria-hidden="true">↗</span>
+                                </button>
+                                <button class="btn btn-secondary" data-open-project2>
+                                    <img src="github.svg" alt="GitHub" width="16" height="16">
+                                    Source Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Mockup Frame -->
+                        <div class="project-mockup-wrapper">
+                            <img src="project-student-data.svg" alt="Pengelolaan Data Siswa UI Mockup"
+                                class="project-mockup-img" loading="lazy">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+          CONTACT SECTION
+          ========================================================================== -->
+        <section class="section" id="contact">
+            <div class="container contact-grid">
+                <!-- Contact Left Column: Narrative & Direct Channels -->
+                <div class="contact-info">
+                    <div class="section-header" style="margin-bottom: 1.5rem;">
+                        <span class="section-label">04 // HUBUNGI SAYA</span>
+                        <h2 class="contact-headline">Tertarik bekerja sama? Mari terhubung.</h2>
+                        <p class="contact-desc">
+                            Saya siap mengembangkan kemampuan serta pengalaman di dunia kerja. Jangan ragu untuk
+                            menghubungi saya melalui kontak di bawah ini.
+                        </p>
+                    </div>
+
+                    <div class="contact-channels">
+                        <!-- Channel 1: Email -->
+                        <div class="contact-channel-card">
+                            <div class="channel-main">
+                                <div class="channel-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="channel-texts">
+                                    <span class="channel-title">Email Resmi</span>
+                                    <span class="channel-value">nabilbilbul1108@gmail.com</span>
+                                </div>
+                            </div>
+                            <button class="channel-action-btn" data-copy="nabilbilbul1108@gmail.com"
+                                data-label="Email nabilbilbul1108@gmail.com">
+                                Copy Email
+                            </button>
+                        </div>
+
+                        <!-- Channel 2: WhatsApp / Phone -->
+                        <div class="contact-channel-card">
+                            <div class="channel-main">
+                                <div class="channel-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="channel-texts">
+                                    <span class="channel-title">No. Telepon / WhatsApp</span>
+                                    <span class="channel-value">0857-2317-7953</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6285723177953" target="_blank" rel="noopener noreferrer"
+                                class="channel-action-btn">
+                                Chat via WA
+                            </a>
+                        </div>
+
+                        <!-- Channel 3: Location -->
+                        <div class="contact-channel-card">
+                            <div class="channel-main">
+                                <div class="channel-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="channel-texts">
+                                    <span class="channel-title">Lokasi &amp; Sekolah</span>
+                                    <span class="channel-value">Panjalu, Ciamis • SMKN 1 Kawali</span>
+                                </div>
+                            </div>
+                            <span class="tech-pill" style="font-size: 0.75rem;">Jawa Barat, ID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Right Column: Interactive Message Form -->
+                <div class="contact-form-wrap">
+                    <h3 class="form-title">Kirim Pesan Langsung</h3>
+                    <p class="form-sub">Formulir ini akan menghubungkan Anda langsung melalui pesan WhatsApp / Email.
+                    </p>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName" class="form-label">Nama Lengkap</label>
+                            <input type="text" id="contactName" class="form-input" placeholder="Masukkan nama Anda..."
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail" class="form-label">Alamat Email</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="nama@perusahaan.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">Pesan / Penawaran Kerja</label>
+                            <textarea id="contactMessage" class="form-textarea"
+                                placeholder="Tuliskan pesan atau penawaran kerja sama Anda..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            Kirim Pesan Sekarang
+                            <span class="btn-arrow" aria-hidden="true">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+        FOOTER
+        ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-monogram">
+                        <img src="monogram.svg" alt="NA Monogram Logo" width="32" height="32">
+                    </div>
+                    <div>
+                        <div class="brand-name" style="font-size: 1.1rem;">NABIL ALPATH ABDUL R</div>
+                        <div class="brand-sub">SMKN 1 KAWALI • REKAYASA PERANGKAT LUNAK</div>
+                    </div>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        aria-label="GitHub Profile">
+                        <img src="github.svg" alt="GitHub" width="20" height="20">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        aria-label="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        aria-label="Instagram Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Nabil Alpath Abdul R. Junior Web Developer.
+                </div>
+
+                <div class="footer-clock" id="liveClockFooter">
+                    WIB (UTC+7)
+                </div>
+
+                <button class="back-to-top" id="backToTop">
+                    Back to Top
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+        MODAL: CURRICULUM VITAE (CV)
+        ========================================================================== -->
+    <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="modal-title" id="cvModalTitle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Curriculum Vitae — Nabil Alpath Abdul R
+                </h3>
+                <button class="modal-close" aria-label="Tutup jendela CV">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="cv-document">
+                    <div class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-photo-frame">
+                                <img src="nabil-profile.jpg" alt="Nabil Alpath Abdul R" class="cv-photo-img">
+                            </div>
+                            <div>
+                                <h2 class="cv-name">NABIL ALPATH ABDUL R</h2>
+                                <div class="cv-role">JUNIOR WEB DEVELOPER | HTML, CSS, LARAVEL &amp; MYSQL</div>
+                            </div>
+                        </div>
+                        <div class="cv-contact-strip">
+                            <span>Alamat: Panjalu, Ciamis, Jawa Barat</span>
+                            <span>No. HP: 0857-2317-7953</span>
+                            <span>Email: nabilbilbul1108@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Section: Ringkasan Saya -->
+                    <div>
+                        <h4 class="cv-section-title">01 // RINGKASAN SAYA</h4>
+                        <p>
+                            Saya merupakan siswa/lulusan SMKN 1 Kawali jurusan Rekayasa Perangkat Lunak (RPL) yang
+                            memiliki minat besar dalam bidang teknologi informasi dan pengembangan perangkat lunak.
+                            Memiliki pengetahuan dasar mengenai pemrograman, pengembangan aplikasi, serta pengelolaan
+                            website. Saya merupakan pribadi yang memiliki semangat belajar tinggi, mampu bekerja sama
+                            dalam tim, bertanggung jawab, dan siap mengembangkan kemampuan serta pengalaman di dunia
+                            kerja.
+                        </p>
+                    </div>
+
+                    <!-- Section: Keahlian Teknis dan Softskill -->
+                    <div>
+                        <h4 class="cv-section-title">02 // KEAHLIAN TEKNIS DAN SOFTSKILL</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.875rem;">
+                            <div>
+                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.3rem;">Hard
+                                    Skills</strong>
+                                HTML, CSS, LARAVEL, MYSQL
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.3rem;">Soft
+                                    Skills</strong>
+                                Team Works, Communication, Time Management, Problem Solving
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Pengalaman Kerja & Proyek -->
+                    <div>
+                        <h4 class="cv-section-title">03 // PENGALAMAN KERJA &amp; PROYEK</h4>
+                        <div style="margin-bottom: 1.25rem;">
+                            <strong style="color: var(--text-primary); font-size: 0.95rem;">Pembuatan Website Company
+                                Profile</strong>
+                            <ul
+                                style="font-size: 0.875rem; margin-top: 0.3rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Mengembangkan website company profile untuk menampilkan informasi dan profil
+                                    perusahaan.</li>
+                                <li>Membuat dan mengatur tampilan halaman website agar menarik, informatif, dan mudah
+                                    digunakan.</li>
+                                <li>Mengelola konten website, seperti profil perusahaan, informasi layanan, dan halaman
+                                    lainnya.</li>
+                                <li>Menerapkan kemampuan dasar HTML, CSS, PHP, dan pengelolaan database.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-primary); font-size: 0.95rem;">Pengelolaan Data
+                                Siswa</strong>
+                            <ul
+                                style="font-size: 0.875rem; margin-top: 0.3rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Membuat proyek sistem pengelolaan data siswa untuk mempermudah proses penyimpanan
+                                    dan pengolahan data.</li>
+                                <li>Mengembangkan fitur tambah, edit, hapus, dan menampilkan data siswa.</li>
+                                <li>Mengelola informasi siswa menggunakan database MySQL.</li>
+                                <li>Menerapkan kemampuan pemrograman dan pengelolaan database dalam membangun sistem
+                                    informasi.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section: Pendidikan -->
+                    <div>
+                        <h4 class="cv-section-title">04 // PENDIDIKAN</h4>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <strong>SMKN 1 KAWALI</strong>
+                        </div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Rekayasa Perangkat Lunak (RPL)
+                        </div>
+                    </div>
+
+                    <!-- Section: Sertifikasi & Lisensi -->
+                    <div>
+                        <h4 class="cv-section-title">05 // SERTIFIKASI &amp; LISENSI</h4>
+                        <p style="font-size: 0.875rem;">
+                            <strong>Sertifikat Kompetensi Keahlian (UKK) Rekayasa Perangkat Lunak</strong><br>
+                            SMKN 1 Kawali (September 2026)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-copy="nabilbilbul1108@gmail.com" data-label="Email Nabil">
+                    Copy Email Kontak
+                </button>
+                <button class="btn btn-primary" id="printCvBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    Print / Download PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+        MODAL: PROJECT 1 INTERACTIVE PREVIEW (COMPANY PROFILE)
+        ========================================================================== -->
+    <div class="modal-overlay" id="project1Modal" role="dialog" aria-modal="true" aria-labelledby="proj1Title">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="modal-title" id="proj1Title">
+                    <span style="color: var(--accent);">[DEMO PREVIEW]</span>
+                    Pembuatan Website Company Profile
+                </h3>
+                <button class="modal-close" aria-label="Tutup preview">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <div
+                    style="background-color: #0c0d10; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <div>
+                            <h4 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF;">Website Company Profile
+                            </h4>
+                            <span
+                                style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">Teknologi:
+                                HTML • CSS • PHP • Laravel • Database</span>
+                        </div>
+                        <span class="status-pill">STATUS: DEMO READY</span>
+                    </div>
+
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1rem;">
+                        Website company profile yang dirancang untuk menampilkan informasi dan profil perusahaan secara
+                        informatif dan menarik.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                        <div
+                            style="background: #14151a; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                            <strong
+                                style="color: var(--accent); display: block; font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">PROFIL
+                                PERUSAHAAN</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Menampilkan latar
+                                belakang, visi, misi, dan struktur organisasi.</p>
+                        </div>
+                        <div
+                            style="background: #14151a; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                            <strong
+                                style="color: var(--accent); display: block; font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">LAYANAN
+                                &amp; KONTEN</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Pengelolaan informasi
+                                layanan dan produk perusahaan.</p>
+                        </div>
+                        <div
+                            style="background: #14151a; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                            <strong
+                                style="color: var(--accent); display: block; font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">TAMPILAN
+                                INTERAKTIF</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Desain halaman yang
+                                informatif, menarik, dan mudah digunakan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="project-company-profile.svg" alt="Company Profile Full High-Resolution Vector"
+                        style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close-modal>Tutup Preview</button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <img src="github.svg" alt="GitHub" width="16" height="16">
+                    Kunjungi GitHub Repository
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+        MODAL: PROJECT 2 INTERACTIVE PREVIEW & SEARCH (STUDENT DATA MANAGEMENT)
+        ========================================================================== -->
+    <div class="modal-overlay" id="project2Modal" role="dialog" aria-modal="true" aria-labelledby="proj2Title">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="modal-title" id="proj2Title">
+                    <span style="color: var(--accent);">[INTERACTIVE DEMO]</span>
+                    Pengelolaan Data Siswa
+                </h3>
+                <button class="modal-close" aria-label="Tutup demo">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                    Sistem pengelolaan data siswa untuk mempermudah proses penyimpanan, pengolahan, dan pencarian data
+                    siswa:
+                </p>
+
+                <!-- Live Search Bar & Filters -->
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                    <input type="text" id="demoStudentSearch" class="form-input"
+                        placeholder="Ketik nama (e.g. Nabil, Dwi, Siti) atau NISN..."
+                        style="flex: 1; min-width: 200px;">
+                    <select id="demoClassFilter" class="form-input"
+                        style="width: auto; min-width: 160px; background-color: var(--bg-secondary);">
+                        <option value="all">Semua Kelas</option>
+                        <option value="XII RPL 1">XII RPL 1</option>
+                        <option value="XII RPL 2">XII RPL 2</option>
+                        <option value="XI RPL 1">XI RPL 1</option>
+                    </select>
+                </div>
+
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); margin-bottom: 0.75rem;"
+                    id="demoResultCount">
+                    Menampilkan 6 dari 6 entri demo
+                </div>
+
+                <!-- Simulated Table -->
+                <div
+                    style="overflow-x: auto; background-color: #0d0f14; border: 1px solid var(--border-subtle); border-radius: 8px;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                        <thead>
+                            <tr
+                                style="background-color: #151922; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); font-family: var(--font-mono); font-size: 0.75rem;">
+                                <th style="padding: 0.75rem 1rem;">NISN</th>
+                                <th style="padding: 0.75rem 1rem;">NAMA SISWA</th>
+                                <th style="padding: 0.75rem 1rem;">KELAS</th>
+                                <th style="padding: 0.75rem 1rem;">JURUSAN</th>
+                                <th style="padding: 0.75rem 1rem;">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="demo-table-row" data-name="Nabil Alpath Abdul R" data-nisn="0071829301"
+                                data-class="XII RPL 1" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829301</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Nabil Alpath Abdul
+                                    R</td>
+                                <td style="padding: 0.75rem 1rem;">XII RPL 1</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">AKTIF</span>
+                                </td>
+                            </tr>
+                            <tr class="demo-table-row" data-name="Dwi Ananda Pratama" data-nisn="0071829302"
+                                data-class="XII RPL 1" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829302</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Dwi Ananda Pratama
+                                </td>
+                                <td style="padding: 0.75rem 1rem;">XII RPL 1</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">AKTIF</span>
+                                </td>
+                            </tr>
+                            <tr class="demo-table-row" data-name="Siti Nurhaliza" data-nisn="0071829303"
+                                data-class="XII RPL 2" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829303</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Siti Nurhaliza</td>
+                                <td style="padding: 0.75rem 1rem;">XII RPL 2</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">AKTIF</span>
+                                </td>
+                            </tr>
+                            <tr class="demo-table-row" data-name="Rizky Pratama" data-nisn="0071829304"
+                                data-class="XII RPL 2" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829304</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Rizky Pratama</td>
+                                <td style="padding: 0.75rem 1rem;">XII RPL 2</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #facc15; background: rgba(250, 204, 21, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">CUTI</span>
+                                </td>
+                            </tr>
+                            <tr class="demo-table-row" data-name="Ahmad Fauzan" data-nisn="0071829305"
+                                data-class="XI RPL 1" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829305</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Ahmad Fauzan</td>
+                                <td style="padding: 0.75rem 1rem;">XI RPL 1</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">AKTIF</span>
+                                </td>
+                            </tr>
+                            <tr class="demo-table-row" data-name="Putri Lestari" data-nisn="0071829306"
+                                data-class="XI RPL 1">
+                                <td style="padding: 0.75rem 1rem; font-family: var(--font-mono); color: #94a3b8;">
+                                    0071829306</td>
+                                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #FFFFFF;">Putri Lestari</td>
+                                <td style="padding: 0.75rem 1rem;">XI RPL 1</td>
+                                <td style="padding: 0.75rem 1rem; color: var(--text-muted);">Rekayasa Perangkat Lunak
+                                </td>
+                                <td style="padding: 0.75rem 1rem;"><span
+                                        style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">AKTIF</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close-modal>Tutup Demo</button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <img src="github.svg" alt="GitHub" width="16" height="16">
+                    Lihat Skema MySQL &amp; Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <!-- ==========================================================================
+       EMBEDDED JAVASCRIPT
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Live Clock
+            const updateClock = () => {
+                const now = new Date();
+                const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' WIB';
+                const liveClock = document.getElementById('liveClock');
+                const liveClockFooter = document.getElementById('liveClockFooter');
+                if (liveClock) liveClock.textContent = timeStr;
+                if (liveClockFooter) liveClockFooter.textContent = `${timeStr} (UTC+7)`;
+            };
+            updateClock();
+            setInterval(updateClock, 1000);
+
+            // 2. Mobile Menu Toggle
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu) navMenu.classList.remove('active');
+                    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // 3. Modals Management
+            const openModal = (id) => {
+                const modal = document.getElementById(id);
+                if (modal) modal.classList.add('active');
+            };
+            const closeModal = (modal) => {
+                if (modal) modal.classList.remove('active');
+            };
+
+            document.querySelectorAll('[data-open-cv]').forEach(btn => btn.addEventListener('click', () => openModal('cvModal')));
+            document.querySelectorAll('[data-open-project1]').forEach(btn => btn.addEventListener('click', () => openModal('project1Modal')));
+            document.querySelectorAll('[data-open-project2]').forEach(btn => btn.addEventListener('click', () => openModal('project2Modal')));
+
+            document.querySelectorAll('.modal-close, [data-close-modal]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const modal = e.target.closest('.modal-overlay');
+                    closeModal(modal);
+                });
+            });
+
+            document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) closeModal(overlay);
+                });
+            });
+
+            // 4. Toast & Copy to Clipboard
+            const showToast = (message) => {
+                const container = document.getElementById('toastContainer');
+                if (!container) return;
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.textContent = message;
+                container.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+            };
+
+            document.querySelectorAll('[data-copy]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const text = btn.getAttribute('data-copy');
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast(`Berhasil menyalin: ${text}`);
+                    });
+                });
+            });
+
+            // 5. Contact Form Simulation (Redirect to WhatsApp)
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('contactName').value;
+                    const email = document.getElementById('contactEmail').value;
+                    const message = document.getElementById('contactMessage').value;
+
+                    const waText = `Halo Nabil, saya ${name} (${email}).%0A%0APesan: ${encodeURIComponent(message)}`;
+                    window.open(`https://wa.me/6285723177953?text=${waText}`, '_blank');
+                    showToast('Mengalihkan ke WhatsApp...');
+                    contactForm.reset();
+                });
+            }
+
+            // 6. Interactive Demo Filter (SIPENDA Modal)
+            const demoSearch = document.getElementById('demoStudentSearch');
+            const demoFilter = document.getElementById('demoClassFilter');
+            const demoRows = document.querySelectorAll('.demo-table-row');
+            const demoCount = document.getElementById('demoResultCount');
+
+            const filterDemoTable = () => {
+                if (!demoSearch || !demoFilter) return;
+                const query = demoSearch.value.toLowerCase();
+                const selectedClass = demoFilter.value;
+                let visibleCount = 0;
+
+                demoRows.forEach(row => {
+                    const name = row.getAttribute('data-name').toLowerCase();
+                    const nisn = row.getAttribute('data-nisn');
+                    const cls = row.getAttribute('data-class');
+
+                    const matchesQuery = name.includes(query) || nisn.includes(query);
+                    const matchesClass = selectedClass === 'all' || cls === selectedClass;
+
+                    if (matchesQuery && matchesClass) {
+                        row.style.display = '';
+                        visibleCount++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                if (demoCount) {
+                    demoCount.textContent = `Menampilkan ${visibleCount} dari ${demoRows.length} entri demo`;
+                }
+            };
+
+            if (demoSearch) demoSearch.addEventListener('input', filterDemoTable);
+            if (demoFilter) demoFilter.addEventListener('change', filterDemoTable);
+
+            // 7. Soft Skills Toggle Simulation
+            const audioBtn = document.getElementById('audioToggleBtn');
+            const audioLabel = document.getElementById('audioStatusLabel');
+            let isPlaying = false;
+            if (audioBtn) {
+                audioBtn.addEventListener('click', () => {
+                    isPlaying = !isPlaying;
+                    if (isPlaying) {
+                        audioBtn.style.color = 'var(--accent)';
+                        audioBtn.style.borderColor = 'var(--accent)';
+                        if (audioLabel) audioLabel.textContent = '⚡ Teamwork, Communication, Time Management';
+                        showToast('Soft skills Nabil Alpath terverifikasi ✨');
+                    } else {
+                        audioBtn.style.color = '';
+                        audioBtn.style.borderColor = '';
+                        if (audioLabel) audioLabel.textContent = 'Team Work • Communication • Time Management';
+                    }
+                });
+            }
+
+            // 8. Back to Top
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // 9. Print CV
+            const printBtn = document.getElementById('printCvBtn');
+            if (printBtn) {
+                printBtn.addEventListener('click', () => {
+                    window.print();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

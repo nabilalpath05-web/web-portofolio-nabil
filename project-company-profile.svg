@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141416" />
+      <stop offset="100%" stop-color="#0a0a0c" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C6FF4D" />
+      <stop offset="100%" stop-color="#8ce62b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f1f24" />
+      <stop offset="100%" stop-color="#121215" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="750" rx="16" fill="url(#bgGrad)" stroke="#26262b" stroke-width="2"/>
+
+  <!-- Subtle glow orb in background -->
+  <circle cx="950" cy="220" r="180" fill="#C6FF4D" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Browser Chrome Top Bar -->
+  <rect x="0" y="0" width="1200" height="54" rx="16" fill="#18181b" />
+  <rect x="0" y="38" width="1200" height="16" fill="#18181b" />
+  <line x1="0" y1="54" x2="1200" y2="54" stroke="#27272a" stroke-width="1.5" />
+
+  <!-- Window controls -->
+  <circle cx="32" cy="27" r="6" fill="#ef4444" opacity="0.85"/>
+  <circle cx="52" cy="27" r="6" fill="#eab308" opacity="0.85"/>
+  <circle cx="72" cy="27" r="6" fill="#22c55e" opacity="0.85"/>
+
+  <!-- Address URL Pill -->
+  <rect x="180" y="13" width="840" height="28" rx="14" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+  <circle cx="204" cy="27" r="4" fill="#C6FF4D"/>
+  <text x="222" y="32" fill="#a1a1aa" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">
+    https://aurora-corporate.com <tspan fill="#52525b">/laravel-mvc-edition</tspan>
+  </text>
+  <rect x="990" y="20" width="14" height="14" rx="3" fill="none" stroke="#52525b" stroke-width="1.5"/>
+
+  <!-- PAGE CONTENT: Hero Corporate Section -->
+  <!-- Navigation bar in mockup -->
+  <g transform="translate(60, 84)">
+    <rect x="0" y="0" width="1080" height="60" rx="12" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <!-- Logo -->
+    <rect x="24" y="18" width="24" height="24" rx="6" fill="#C6FF4D"/>
+    <text x="31" y="35" fill="#0a0a0a" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800">A</text>
+    <text x="58" y="35" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="0.5">AURORA TECH</text>
+    
+    <!-- Nav Links -->
+    <text x="680" y="35" fill="#C6FF4D" font-family="sans-serif" font-size="13" font-weight="600">Home</text>
+    <text x="750" y="35" fill="#9ca3af" font-family="sans-serif" font-size="13">Services</text>
+    <text x="830" y="35" fill="#9ca3af" font-family="sans-serif" font-size="13">Portfolio</text>
+    <text x="910" y="35" fill="#9ca3af" font-family="sans-serif" font-size="13">About</text>
+    <rect x="980" y="14" width="76" height="32" rx="6" fill="#C6FF4D"/>
+    <text x="996" y="34" fill="#0a0a0a" font-family="sans-serif" font-size="12" font-weight="700">Contact</text>
+  </g>
+
+  <!-- Hero Content Section -->
+  <g transform="translate(80, 180)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="220" height="28" rx="14" fill="#1e2815" stroke="#3b581e" stroke-width="1"/>
+    <circle cx="16" cy="14" r="4" fill="#C6FF4D"/>
+    <text x="30" y="19" fill="#C6FF4D" font-family="sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">NEXT-GEN ENTERPRISE CMS</text>
+
+    <!-- Main Typography -->
+    <text x="0" y="80" fill="#f4f4f5" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+      Empowering Digital Growth
+    </text>
+    <text x="0" y="132" fill="#f4f4f5" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+      Through Intelligent Scalability.
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="180" fill="#a1a1aa" font-family="sans-serif" font-size="16" font-weight="400">
+      Arsitektur modern Laravel &amp; MySQL dengan panel manajemen konten terstruktur,
+    </text>
+    <text x="0" y="206" fill="#a1a1aa" font-family="sans-serif" font-size="16" font-weight="400">
+      keamanan otentikasi enterprise, serta performa rendering halaman optimal.
+    </text>
+
+    <!-- CTA Buttons -->
+    <rect x="0" y="246" width="160" height="46" rx="8" fill="#C6FF4D"/>
+    <text x="34" y="275" fill="#09090b" font-family="sans-serif" font-size="14" font-weight="700">Explore Services →</text>
+
+    <rect x="180" y="246" width="150" height="46" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="214" y="275" fill="#e4e4e7" font-family="sans-serif" font-size="14" font-weight="600">Company Deck</text>
+  </g>
+
+  <!-- Right Visual / Feature Cards Grid -->
+  <g transform="translate(680, 180)">
+    <!-- Card 1: Metric Card -->
+    <rect x="0" y="0" width="440" height="170" rx="14" fill="url(#cardGrad)" stroke="#27272a" stroke-width="1"/>
+    <rect x="20" y="20" width="36" height="36" rx="8" fill="#222b16" stroke="#48691f" stroke-width="1"/>
+    <path d="M 32 38 L 38 44 L 46 30" fill="none" stroke="#C6FF4D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="36" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700">Dynamic Service Catalog</text>
+    <text x="70" y="52" fill="#71717a" font-family="sans-serif" font-size="12">Laravel Blade + Eloquent ORM + MySQL</text>
+
+    <!-- Stats strip -->
+    <line x1="20" y1="74" x2="420" y2="74" stroke="#27272a" stroke-width="1"/>
+    <g transform="translate(24, 94)">
+      <text x="0" y="20" fill="#C6FF4D" font-family="sans-serif" font-size="28" font-weight="800">99.8%</text>
+      <text x="0" y="38" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="500">UPTIME RELIABILITY</text>
+
+      <text x="140" y="20" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="800">0.4s</text>
+      <text x="140" y="38" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="500">QUERY RESPONSE</text>
+
+      <text x="270" y="20" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="800">100%</text>
+      <text x="270" y="38" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="500">RESPONSIVE UI</text>
+    </g>
+
+    <!-- Card 2: Interactive Modules -->
+    <rect x="0" y="190" width="440" height="160" rx="14" fill="url(#cardGrad)" stroke="#27272a" stroke-width="1"/>
+    <text x="24" y="32" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" transform="translate(0, 190)">Key Modules &amp; Architecture</text>
+    
+    <g transform="translate(24, 235)">
+      <rect x="0" y="0" width="124" height="60" rx="8" fill="#18181b" stroke="#333338" stroke-width="1"/>
+      <text x="14" y="24" fill="#C6FF4D" font-family="monospace" font-size="11">CMS Backend</text>
+      <text x="14" y="44" fill="#a1a1aa" font-family="sans-serif" font-size="10">Content Admin</text>
+
+      <rect x="134" y="0" width="124" height="60" rx="8" fill="#18181b" stroke="#333338" stroke-width="1"/>
+      <text x="148" y="24" fill="#C6FF4D" font-family="monospace" font-size="11">Lead Inquiries</text>
+      <text x="148" y="44" fill="#a1a1aa" font-family="sans-serif" font-size="10">Mail &amp; DB Sync</text>
+
+      <rect x="268" y="0" width="124" height="60" rx="8" fill="#18181b" stroke="#333338" stroke-width="1"/>
+      <text x="282" y="24" fill="#C6FF4D" font-family="monospace" font-size="11">SEO Engine</text>
+      <text x="282" y="44" fill="#a1a1aa" font-family="sans-serif" font-size="10">Meta &amp; OpenGraph</text>
+    </g>
+  </g>
+
+  <!-- Bottom Brand Trust / Tech Stack Footer inside Mockup -->
+  <g transform="translate(80, 560)">
+    <rect x="0" y="0" width="1040" height="130" rx="14" fill="#111114" stroke="#222226" stroke-width="1"/>
+    
+    <text x="30" y="36" fill="#71717a" font-family="sans-serif" font-size="12" font-weight="600" letter-spacing="1">
+      CORE ARCHITECTURE / STACK
+    </text>
+
+    <!-- Pill tags -->
+    <g transform="translate(30, 56)">
+      <!-- Laravel -->
+      <rect x="0" y="0" width="120" height="38" rx="6" fill="#1a1a1e" stroke="#2f2f35" stroke-width="1"/>
+      <circle cx="20" cy="19" r="5" fill="#f43f5e"/>
+      <text x="34" y="24" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">Laravel 10</text>
+
+      <!-- PHP -->
+      <rect x="134" y="0" width="110" height="38" rx="6" fill="#1a1a1e" stroke="#2f2f35" stroke-width="1"/>
+      <circle cx="152" cy="19" r="5" fill="#818cf8"/>
+      <text x="166" y="24" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">PHP 8.x</text>
+
+      <!-- MySQL -->
+      <rect x="258" y="0" width="120" height="38" rx="6" fill="#1a1a1e" stroke="#2f2f35" stroke-width="1"/>
+      <circle cx="276" cy="19" r="5" fill="#38bdf8"/>
+      <text x="290" y="24" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">MySQL RDBMS</text>
+
+      <!-- JavaScript -->
+      <rect x="392" y="0" width="115" height="38" rx="6" fill="#1a1a1e" stroke="#2f2f35" stroke-width="1"/>
+      <circle cx="410" cy="19" r="5" fill="#facc15"/>
+      <text x="424" y="24" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">JavaScript</text>
+
+      <!-- Tailwind / CSS -->
+      <rect x="521" y="0" width="120" height="38" rx="6" fill="#1a1a1e" stroke="#2f2f35" stroke-width="1"/>
+      <circle cx="539" cy="19" r="5" fill="#2dd4bf"/>
+      <text x="553" y="24" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">Modern CSS</text>
+    </g>
+
+    <!-- Right status badge -->
+    <g transform="translate(860, 54)">
+      <rect x="0" y="0" width="150" height="42" rx="21" fill="#1a2710" stroke="#4c731e" stroke-width="1"/>
+      <circle cx="22" cy="21" r="5" fill="#C6FF4D"/>
+      <text x="36" y="26" fill="#C6FF4D" font-family="sans-serif" font-size="12" font-weight="700">PRODUCTION READY</text>
+    </g>
+  </g>
+</svg>
+

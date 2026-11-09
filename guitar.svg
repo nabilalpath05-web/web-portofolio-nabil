@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Guitar Neck & Headstock -->
+  <line x1="16.5" y1="7.5" x2="20.5" y2="3.5"></line>
+  <circle cx="21" cy="3" r="1" fill="currentColor"></circle>
+  <line x1="18" y1="2" x2="22" y2="6"></line>
+  <!-- Tuning pegs -->
+  <line x1="20" y1="2" x2="19" y2="1"></line>
+  <line x1="22" y1="4" x2="23" y2="3"></line>
+  <!-- Guitar Body (Figure 8 / Acoustic Body) -->
+  <path d="M9 18a4 4 0 0 0 4-4c0-1.5-.7-2.3-1.5-3 .8-.7 1.5-1.5 1.5-3a4 4 0 0 0-6.8-2.8L6 5.5A4 4 0 0 0 3.2 12c.7.8 1.5 1.5 1.5 3a4 4 0 0 0 4.3 3z"></path>
+  <!-- Sound hole -->
+  <circle cx="8.5" cy="11.5" r="1.5"></circle>
+  <!-- Bridge -->
+  <line x1="6.5" y1="15.5" x2="10.5" y2="15.5"></line>
+</svg>
+
